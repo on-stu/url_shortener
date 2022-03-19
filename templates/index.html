@@ -78,12 +78,12 @@
   </style>
 </head>
 <main>
-  <h1>URL Shortener</h1>
+  <h1>URL 줄이기 서비스</h1>
   <form id="post-form">
     {% csrf_token %}
     <input type="text" name="link" id="link" placeholder="Enter URL here" />
     <div class="buttons">
-      <button type="submit" id="shorten">Shorten</button>
+      <button type="submit" id="shorten">줄이기</button>
     </div>
   </form>
 
@@ -102,7 +102,7 @@
         csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
       },
       success: function (data) {
-        $("h2").html("localhost:8000/" + data);
+        $("h2").html("http://3.35.218.51:8000/" + data);
       },
     });
   });
